@@ -16,28 +16,39 @@ This is a Dockerfile to build a debian based container image running nginx and p
 
 ## Building from source
 To build from source you need to clone the git repo and run docker build:
-```
+```sh
 $ git clone https://github.com/wyveo/nginx-php-fpm.git
 $ cd nginx-php-fpm
 ```
 
 followed by
-```
+```sh
 $ docker build -t nginx-php-fpm:php74 . # PHP 7.4.x
 ```
 
 ## Pulling from Docker Hub
-```
+```sh
 $ docker pull wyveo/nginx-php-fpm:7.4
 ```
 
 ## Running
 To run the container:
-```
+```sh
 $ sudo docker run -d wyveo/nginx-php-fpm:7.4
+```
+
+## Link Symbolic
+```sh
+$ ln -s public html
 ```
 
 Default web root:
 ```
 /usr/share/nginx/html
 ```
+
+## Docker Desktop
+project name:
+port number: 
+path local:  root path of project
+path docker:  type /usr/share/nginx
